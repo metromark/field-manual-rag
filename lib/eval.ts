@@ -85,7 +85,7 @@ ${answer}
 Extract each substantive claim from the answer and decide whether the passages support it. A claim is supported if a passage states it or it is a faithful paraphrase or summary.
 
 Do NOT extract these (they are not substantive claims):
-- attribution or meta statements ("per ${corpus.shortName}", the document's name or date, "see Figure 9-5 in the manual");
+- attribution or meta statements ("per ${corpus.shortName}", the document's name or date, "see Figure 3-2 in the document");
 - statements about what the source does or does not cover, including a one-line description of its general scope;
 - suggestions of other questions to ask, and generic referrals ("seek medical help", "consult the manufacturer").
 
