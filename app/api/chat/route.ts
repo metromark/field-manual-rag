@@ -7,16 +7,14 @@
  * render as source cards under the answer.
  */
 import { streamText, type Message } from 'ai';
+import { chatSettings } from '@/lib/chat';
 import { getActiveCorpus } from '@/lib/corpora';
-import { chatModel } from '@/lib/models';
-import { buildSystemPrompt } from '@/lib/prompt';
-import { makeSearchTool } from '@/lib/retrieval';
+import { MAX_MESSAGE_CHARS } from '@/lib/ui';
 
 export const maxDuration = 30;
 
 // Basic guards: this endpoint is public and spends the OpenAI key.
 const MAX_MESSAGES = 12;
-const MAX_MESSAGE_CHARS = 2000;
 
 export async function POST(req: Request) {
   let messages: Message[];
@@ -37,15 +35,7 @@ export async function POST(req: Request) {
   const firstUser = recent.findIndex((m) => m.role === 'user');
   recent = recent.slice(firstUser);
 
-  const corpus = getActiveCorpus();
-  const result = streamText({
-    model: chatModel,
-    system: buildSystemPrompt(corpus),
-    messages: recent,
-    tools: { [corpus.tool.name]: makeSearchTool(corpus) },
-    maxSteps: 3,
-    temperature: 0.2,
-  });
+  const result = streamText({ ...chatSettings(getActiveCorpus()), messages: recent });
 
   return result.toDataStreamResponse({
     getErrorMessage: (error) => {

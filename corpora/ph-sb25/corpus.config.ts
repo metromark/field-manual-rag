@@ -45,5 +45,6 @@ export default defineCorpus({
     searchingLabel: 'Searching the bill…',
     placeholder: 'Ask about definitions, obligations, penalties…',
     openLabel: 'Open bill',
+    accent: '#1e3a8a',
   },
 });

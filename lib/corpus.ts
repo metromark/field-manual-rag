@@ -84,6 +84,8 @@ export const CorpusConfigSchema = z.object({
     placeholder: z.string().min(1),
     /** Label for the deep link, e.g. "Open manual" */
     openLabel: z.string().min(1),
+    /** Accent color (hex) for header, chips, and citations */
+    accent: z.string().regex(/^#[0-9a-fA-F]{6}$/).default('#0f766e'),
   }),
 });
 

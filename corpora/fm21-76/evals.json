@@ -1,0 +1,32 @@
+{
+  "notes": "Ground truth located by keyword search over the chunked text, not by the retriever under test. pages = inclusive PDF page span where the answer appears; a retrieved source counts as a hit if its page span overlaps and its group matches.",
+  "questions": [
+    { "id": "water-still", "question": "How do I build a belowground still?", "group": "Water Procurement", "pages": [76, 78] },
+    { "id": "water-boil", "question": "How long should I boil water to make it safe?", "group": "Water Procurement", "pages": [78, 79] },
+    { "id": "survival-acronym", "question": "What does each letter of SURVIVAL stand for?", "group": "Introduction", "pages": [4, 7] },
+    { "id": "hypothermia-signs", "question": "What are the signs of hypothermia?", "group": "Cold Weather Survival", "pages": [193, 194] },
+    { "id": "snakebite", "question": "What should I do if a snake bites me?", "group": "Basic Survival Medicine", "pages": [39, 41] },
+    { "id": "shadow-tip", "question": "How do I find north with the shadow-tip method?", "group": "Field-Expedient Direction Finding", "pages": [252, 253] },
+    { "id": "bow-drill", "question": "How do I start a fire with a bow and drill?", "group": "Firecraft", "pages": [89, 90] },
+    { "id": "snow-cave", "question": "How do I build a snow cave shelter?", "group": "Cold Weather Survival", "pages": [197, 198] },
+    { "id": "edibility-test", "question": "How do I test whether an unknown plant is safe to eat?", "group": "Survival Use of Plants", "pages": [130, 132] },
+    { "id": "raft-water", "question": "How do I ration drinking water on a life raft?", "group": "Sea Survival", "pages": [227, 228] },
+    { "id": "signal-mirror", "question": "How do I use a mirror to signal an aircraft?", "group": "Signaling Techniques", "pages": [263, 265] },
+    { "id": "rapids", "question": "How do I safely cross a fast river or rapids?", "group": "Expedient Water Crossings", "pages": [242, 245] },
+    { "id": "sharks", "question": "How do I avoid or fend off sharks while in the water?", "group": "Sea Survival", "pages": [233, 235] },
+    { "id": "heatstroke", "question": "What are the signs of heatstroke and how do I treat it?", "group": "Basic Survival Medicine", "pages": [45, 46] },
+    { "id": "snare", "question": "How do I make a simple snare?", "group": "Food Procurement", "pages": [101, 103] },
+    { "id": "stressors", "question": "What are common survival stressors?", "group": "Psychology of Survival", "pages": [10, 12] },
+    { "id": "tourniquet", "question": "When and how should I apply a tourniquet?", "group": "Basic Survival Medicine", "pages": [31, 32] },
+    { "id": "camouflage", "question": "How do I camouflage my face and skin?", "group": "Camouflage", "pages": [281, 283] },
+    { "id": "desert-water", "question": "How much water do I need per day in the desert?", "group": "Desert Survival", "pages": [173, 174] },
+
+    { "id": "oos-gps", "question": "How do I pair a Garmin GPS with my phone for navigation?", "answerable": false },
+    { "id": "oos-brand", "question": "What's the best brand of freeze-dried backpacking food?", "answerable": false },
+    { "id": "oos-covid", "question": "How should I treat a COVID-19 infection in the field?", "answerable": false },
+    { "id": "oos-epipen", "question": "What dose of epinephrine auto-injector should I use for anaphylaxis?", "answerable": false },
+
+    { "id": "talk-hi", "question": "Hi! What can you do?", "smalltalk": true },
+    { "id": "talk-thanks", "question": "Thanks, that was helpful.", "smalltalk": true }
+  ]
+}

@@ -23,7 +23,18 @@ export type Source = {
   subsection?: string;
   /** Deep link into the PDF */
   url: string;
+  /** Warning for the model when the passage points at content it cannot see */
+  note?: string;
 };
+
+const FIGURE_REF = /\b(?:Figure|Fig\.|Table)\s+\d+(?:-\d+)?/g;
+
+/** Figures are images, so their contents never reach the text layer. Say so right next to the passage. */
+function figureNote(text: string): string | undefined {
+  const refs = [...new Set(text.match(FIGURE_REF) ?? [])];
+  if (refs.length === 0) return undefined;
+  return `This passage refers to ${refs.join(', ')}. Figures are images: their contents (steps, labels, diagrams) are NOT in this text. Point the reader to the figure; do not describe or reconstruct it.`;
+}
 
 /**
  * A group filter narrows but never excludes: the best unfiltered hits are
@@ -79,6 +90,7 @@ export async function searchCorpus(
       section: m.section,
       subsection: m.subsection,
       url: docUrl(corpus.id, m.file, m.pdfPage),
+      note: figureNote(m.text),
     };
   });
 }

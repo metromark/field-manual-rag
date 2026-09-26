@@ -1,0 +1,11 @@
+{
+  "notes": "Small smoke set for the second corpus. pages = inclusive PDF page span where the answer appears.",
+  "questions": [
+    { "id": "short-title", "question": "What is the short title of the Act?", "pages": [3, 3] },
+    { "id": "coverage", "question": "Does the bill cover AGI and superintelligence?", "pages": [4, 4] },
+    { "id": "registration", "question": "Do AI systems need to be registered, and with whom?", "pages": [10, 10] },
+    { "id": "penalties", "question": "What are the prohibited acts and penalties?", "pages": [14, 15] },
+    { "id": "oos-eu", "question": "What fines does the EU AI Act impose on general-purpose AI providers?", "answerable": false },
+    { "id": "talk-hi", "question": "Hello, what is this?", "smalltalk": true }
+  ]
+}

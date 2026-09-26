@@ -82,7 +82,8 @@ export default defineCorpus({
       'Hi, what can you do?',
     ],
     searchingLabel: 'Checking the manual…',
-    placeholder: 'Ask about water, shelter, fire, first aid, navigation…',
+    placeholder: 'Ask about water, shelter, fire…',
     openLabel: 'Open manual',
+    accent: '#4d5a2c',
   },
 });
