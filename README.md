@@ -63,6 +63,8 @@ Settings: target 1200 chars, 200 overlap within a section, minimum 400. The resu
 | gpt-4o-mini | 5 | 19/19 | 4/4 | 2/2 | 20/23 |
 | gpt-4o-mini | 8 | 19/19 | 4/4 | 2/2 | 18/23 |
 
+**Re-run on the deployed prompt** (after making the figure rule generic): 19/19 · 4/4 · 2/2 · grounded 20/23 by raw judge score. On manual review, all three flags are sentences saying what the manual does *not* cover ("the meanings of R, V, I are not provided in the retrieved text"), which the judge is told to ignore. They are judge false positives, not hallucinations.
+
 What the numbers changed:
 - **The model changed from `gpt-4o-mini` to `gpt-4.1-mini`.** The Universal Edibility Test steps exist only in Figure 9-5, an image. `gpt-4o-mini` recited the steps from memory in every run, even with prompt rules and the per-passage figure warning; `gpt-4.1-mini` pointed to the figure.
 - **topK stays at 5.** With more passages in context, both models padded their answers with unsupported detail.

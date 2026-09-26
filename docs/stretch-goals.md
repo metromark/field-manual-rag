@@ -23,7 +23,7 @@ The empty state shows clickable example questions that send immediately. They co
 | topK 8 lowered groundedness for both models (19/23 and 18/23, vs 23/23 at topK 5) | topK stays at 5 |
 | First judge design was noisy (yes/no + list) | Rewrote it to judge claim by claim with evidence |
 
-Final configuration: 19/19 answerable, 4/4 refused, 2/2 small talk without a tool call, 23/23 grounded (single run).
+Final configuration: 19/19 answerable, 4/4 refused, 2/2 small talk without a tool call, 23/23 grounded (single run). A re-run on the deployed prompt scored 20/23 by raw judge score; on manual review, all three flags were "the manual doesn't cover X" statements (judge false positives).
 
 ## Also built (not claimed)
 
